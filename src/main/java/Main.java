@@ -12,7 +12,7 @@ public class Main extends ListenerAdapter {
 
     public static void main(String[] args) throws LoginException {
 
-        JDA bot = JDABuilder.createDefault("MTAzMjIzNTYyNjg2MDM4MDE3MA.Glj_RY.deyhZlG5fFRvG5JG7yj8n2vqtcDR18Qzp5BKQc")
+        JDA bot = JDABuilder.createDefault("")
                 .setActivity(Activity.watching("ta mère se faire baiser"))
                 .enableIntents(GatewayIntent.MESSAGE_CONTENT)
                 .build();
