@@ -61,16 +61,28 @@ public class Main extends ListenerAdapter {
                 event.getMessage().delete().queue();
             }
         }
+        else if(event.getMessage().getContentRaw().toLowerCase().contains("!chad")){
+            String[] args = event.getMessage().getContentRaw().split(" ");
+            event.getChannel().sendMessage(args[1] + " " + event.getMessage().getAuthor() + " te considère comme un chad et il à raison car tu en est vraiment un").queue();
+
+        }
     }
 
     public String ratio(){
-        String res;
         ArrayList<String> ratio = new ArrayList<>();
         ratio.add("la salope");
         ratio.add("la petite pute");
         ratio.add("la merde");
         ratio.add("le sous humain");
         return ratio.get(getRandomNumberInRange(0,3));
+    }
+
+    public String chad(){
+        ArrayList<String> chad = new ArrayList<>();
+        chad.add("https://tenor.com/view/chad-music-music-sigma-chad-listening-music-chad-headphones-gif-25379685");
+        chad.add("https://tenor.com/view/doctor-david-livesey-david-livesey-doctor-livesey-chad-rom-and-skull-gif-26497072");
+        chad.add("https://www.netcost-security.fr/wp-content/uploads/2021/04/Giga-Chad.jpg");
+        return chad.get(getRandomNumberInRange(0,2));
     }
 
     public String cringe(){
