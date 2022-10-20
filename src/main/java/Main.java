@@ -57,23 +57,23 @@ public class Main extends ListenerAdapter {
             }
             else {
                 String[] args = event.getMessage().getContentRaw().split(" ");
-                event.getChannel().sendMessage(event.getMessage().getAuthor() + "ratio" + args[1] + ratio()).queue();
+                event.getChannel().sendMessage(event.getMessage().getAuthor().getName() + " ratio " + args[1] + ratio()).queue();
                 event.getMessage().delete().queue();
             }
         }
         else if(event.getMessage().getContentRaw().toLowerCase().contains("!chad")){
             String[] args = event.getMessage().getContentRaw().split(" ");
-            event.getChannel().sendMessage(args[1] + " " + event.getMessage().getAuthor() + " te considère comme un chad et il à raison car tu en est vraiment un").queue();
-
+            event.getChannel().sendMessage(args[1] + " " + event.getMessage().getAuthor().getName() + " te considère comme un chad et il à raison car tu en est vraiment un").queue();
+            event.getChannel().sendMessage(chad()).queue();
         }
     }
 
     public String ratio(){
         ArrayList<String> ratio = new ArrayList<>();
-        ratio.add("la salope");
-        ratio.add("la petite pute");
-        ratio.add("la merde");
-        ratio.add("le sous humain");
+        ratio.add(" la salope");
+        ratio.add(" la petite pute");
+        ratio.add(" la merde");
+        ratio.add(" le sous humain");
         return ratio.get(getRandomNumberInRange(0,3));
     }
 
